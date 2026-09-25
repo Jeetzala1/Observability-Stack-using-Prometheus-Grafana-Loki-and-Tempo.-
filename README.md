@@ -1,8 +1,8 @@
-# FastAPI Observability Stack 🔍
+﻿# FastAPI Observability Stack ðŸ”
 
 A complete production-ready observability stack demonstrating **Metrics, Logs, and Traces** (the three pillars of observability) using FastAPI, Prometheus, Grafana, Loki, and Tempo.
 
-## 📸 Screenshots & Results
+## ðŸ“¸ Screenshots & Results
 
 
 ## Locust web interface of dummy request:
@@ -49,7 +49,7 @@ A complete production-ready observability stack demonstrating **Metrics, Logs, a
 
 ---
 
-## 🏗️ Architecture Overview
+## ðŸ—ï¸ Architecture Overview
 
 ```mermaid
 graph TB
@@ -96,7 +96,7 @@ graph TB
 
 ---
 
-## 🚀 Quick Start
+## ðŸš€ Quick Start
 
 ### Prerequisites
 - Docker & Docker Compose
@@ -105,7 +105,7 @@ graph TB
 
 ### 1. Clone & Start Services
 ```bash
-git clone https://github.com/sagarrajak245/Observability-Stack-using-Prometheus-Grafana-Loki-and-Tempo.-.git
+git clone https://github.com/Jeetzala1/Observability-Stack-using-Prometheus-Grafana-Loki-and-Tempo.-.git
 cd fastapi-observability-stack
 
 # Start the complete stack
@@ -139,31 +139,31 @@ locust -f locustfile.py --host http://localhost:8000
 
 ---
 
-## 📁 File Structure & Purpose
+## ðŸ“ File Structure & Purpose
 
 ```
-├── app/
-│   ├── __init__.py              # Python package marker
-│   ├── main.py                  # 🎯 FastAPI app with observability
-│   ├── auth.py                  # 🔐 JWT authentication system
-│   ├── models.py                # 🗃️ SQLAlchemy database models
-│   ├── schemas.py               # 📝 Pydantic validation schemas
-│   ├── database.py              # 🔗 Database connection setup
-│   └── crud.py                  # 📊 Database operations
-│── prometheus.yml           # ⚙️ Prometheus scraping config
-│── promtail-config.yml      # ⚙️ Log shipping configuration
-│── tempo-config.yaml        # ⚙️ Distributed tracing setup
-│── grafana-datasources.yml  # ⚙️ Grafana data source config
-├── docker-compose.yml           # 🐳 Complete stack orchestration
-├── requirements.txt             # 📦 Python dependencies
-├── locustfile.py               # 🚦 Load testing scenarios
-├── Dockerfile                   # 🐳 FastAPI container build
-└── screenshots/                 # 📸 Output images directory
+â”œâ”€â”€ app/
+â”‚   â”œâ”€â”€ __init__.py              # Python package marker
+â”‚   â”œâ”€â”€ main.py                  # ðŸŽ¯ FastAPI app with observability
+â”‚   â”œâ”€â”€ auth.py                  # ðŸ” JWT authentication system
+â”‚   â”œâ”€â”€ models.py                # ðŸ—ƒï¸ SQLAlchemy database models
+â”‚   â”œâ”€â”€ schemas.py               # ðŸ“ Pydantic validation schemas
+â”‚   â”œâ”€â”€ database.py              # ðŸ”— Database connection setup
+â”‚   â””â”€â”€ crud.py                  # ðŸ“Š Database operations
+â”‚â”€â”€ prometheus.yml           # âš™ï¸ Prometheus scraping config
+â”‚â”€â”€ promtail-config.yml      # âš™ï¸ Log shipping configuration
+â”‚â”€â”€ tempo-config.yaml        # âš™ï¸ Distributed tracing setup
+â”‚â”€â”€ grafana-datasources.yml  # âš™ï¸ Grafana data source config
+â”œâ”€â”€ docker-compose.yml           # ðŸ³ Complete stack orchestration
+â”œâ”€â”€ requirements.txt             # ðŸ“¦ Python dependencies
+â”œâ”€â”€ locustfile.py               # ðŸš¦ Load testing scenarios
+â”œâ”€â”€ Dockerfile                   # ðŸ³ FastAPI container build
+â””â”€â”€ screenshots/                 # ðŸ“¸ Output images directory
 ```
 
 ---
 
-## 🔧 Detailed File Analysis
+## ðŸ”§ Detailed File Analysis
 
 ### Core Application Files
 
@@ -280,11 +280,11 @@ class APIUser(HttpUser):
 
 ---
 
-## 📊 Data Flow Architecture
+## ðŸ“Š Data Flow Architecture
 
 ### 1. **Metrics Pipeline** 
 ```
-FastAPI Request → Prometheus Instrumentator → Prometheus Storage → Grafana Visualization
+FastAPI Request â†’ Prometheus Instrumentator â†’ Prometheus Storage â†’ Grafana Visualization
 ```
 
 **What's Captured**:
@@ -295,7 +295,7 @@ FastAPI Request → Prometheus Instrumentator → Prometheus Storage → Grafana
 
 ### 2. **Logging Pipeline**
 ```
-FastAPI Logs → Docker stdout → Promtail → Loki Storage → Grafana Search
+FastAPI Logs â†’ Docker stdout â†’ Promtail â†’ Loki Storage â†’ Grafana Search
 ```
 
 **Log Correlation**:
@@ -305,7 +305,7 @@ FastAPI Logs → Docker stdout → Promtail → Loki Storage → Grafana Search
 
 ### 3. **Tracing Pipeline** 
 ```
-FastAPI (OpenTelemetry) → OTLP Exporter → Tempo Storage → Grafana Trace View
+FastAPI (OpenTelemetry) â†’ OTLP Exporter â†’ Tempo Storage â†’ Grafana Trace View
 ```
 
 **Trace Spans**:
@@ -316,39 +316,39 @@ FastAPI (OpenTelemetry) → OTLP Exporter → Tempo Storage → Grafana Trace Vi
 
 ### 4. **Unified Observability**
 The real power is in **correlation**:
-- **Metric Alert** → Drill down to specific **Traces** → View related **Logs**
-- **Error Log** → Find corresponding **Trace** → See **Metrics** context
-- **Slow Request** → Analyze **Trace** → Identify bottleneck in **Logs**
+- **Metric Alert** â†’ Drill down to specific **Traces** â†’ View related **Logs**
+- **Error Log** â†’ Find corresponding **Trace** â†’ See **Metrics** context
+- **Slow Request** â†’ Analyze **Trace** â†’ Identify bottleneck in **Logs**
 
 ---
 
-## 🎯 Use Cases & Scenarios
+## ðŸŽ¯ Use Cases & Scenarios
 
 ### Development Scenarios
 
 #### 1. **Performance Investigation**
 ```
-High Latency Alert in Grafana → View Traces → Identify Slow Database Query → Check Logs for Error Details
+High Latency Alert in Grafana â†’ View Traces â†’ Identify Slow Database Query â†’ Check Logs for Error Details
 ```
 
 #### 2. **Error Debugging**  
 ```
-Error Rate Spike → Filter Traces by Error → Correlate with Application Logs → Root Cause Analysis
+Error Rate Spike â†’ Filter Traces by Error â†’ Correlate with Application Logs â†’ Root Cause Analysis
 ```
 
 #### 3. **Capacity Planning**
 ```
-Monitor Request Rate Trends → Analyze Resource Usage → Plan Scaling Strategy
+Monitor Request Rate Trends â†’ Analyze Resource Usage â†’ Plan Scaling Strategy
 ```
 
 #### 4. **Feature Impact Analysis**
 ```
-Deploy New Feature → Monitor Metrics Change → Trace User Journey → Validate Performance
+Deploy New Feature â†’ Monitor Metrics Change â†’ Trace User Journey â†’ Validate Performance
 ```
 
 ---
 
-## 🚦 Running Different Scenarios
+## ðŸš¦ Running Different Scenarios
 
 ### Scenario 1: Normal Traffic
 ```bash
@@ -367,7 +367,7 @@ locust -f locustfile.py --host=http://localhost:8000 --users 20 --spawn-rate 2 -
 
 ---
 
-## 📈 Expected Grafana Dashboards
+## ðŸ“ˆ Expected Grafana Dashboards
 
 ### 1. **Application Metrics Dashboard**
 - Request Rate (req/sec)
@@ -387,7 +387,7 @@ locust -f locustfile.py --host=http://localhost:8000 --users 20 --spawn-rate 2 -
 
 ---
 
-## 🐛 Troubleshooting
+## ðŸ› Troubleshooting
 
 ### Common Issues
 
@@ -419,7 +419,7 @@ docker system prune  # if needed
 
 ---
 
-## 🔒 Security Considerations
+## ðŸ”’ Security Considerations
 
 ### Production Checklist
 - [ ] Change default Grafana credentials
@@ -438,7 +438,7 @@ docker system prune  # if needed
 
 ---
 
-## 📚 Learning Resources
+## ðŸ“š Learning Resources
 
 ### Understanding the Stack
 - [OpenTelemetry Documentation](https://opentelemetry.io/docs/)
@@ -453,7 +453,7 @@ docker system prune  # if needed
 
 ---
 
-## 🚀 Next Steps & Extensions
+## ðŸš€ Next Steps & Extensions
 
 ### For Production Deployment
 1. **Infrastructure as Code**: Terraform/Kubernetes manifests
@@ -470,7 +470,7 @@ docker system prune  # if needed
 
 ---
 
-## 📝 Contributing
+## ðŸ“ Contributing
 
 ### Adding New Features
 1. Add instrumentation to new endpoints
@@ -486,10 +486,10 @@ docker system prune  # if needed
 
 ---
 
-## 📄 License
+## ðŸ“„ License
 
 MIT License - Feel free to use this as a reference for your observability implementations!
 
 ---
 
-**🎉 Happy Observing!** This stack provides a solid foundation for understanding how modern applications are monitored in production. The correlation between metrics, logs, and traces gives you superpowers for debugging and performance optimization.
+**ðŸŽ‰ Happy Observing!** This stack provides a solid foundation for understanding how modern applications are monitored in production. The correlation between metrics, logs, and traces gives you superpowers for debugging and performance optimization.
